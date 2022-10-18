@@ -62,7 +62,7 @@ diff --git a/tests/fixed/ControlStructures.php b/tests/fixed/ControlStructures.p
 index f8f7f65..a653086 100644
 --- a/tests/fixed/ControlStructures.php
 +++ b/tests/fixed/ControlStructures.php
-@@ -104,7 +104,7 @@ public function spaceBelowBlocks(): void
+@@ -104,7 +104,7 @@ class ControlStructures
  
          try {
              echo 4;
@@ -75,7 +75,7 @@ diff --git a/tests/fixed/EarlyReturn.php b/tests/fixed/EarlyReturn.php
 index fc734db..caf1dbb 100644
 --- a/tests/fixed/EarlyReturn.php
 +++ b/tests/fixed/EarlyReturn.php
-@@ -11,7 +11,7 @@ public function bar(): bool
+@@ -11,7 +11,7 @@ class EarlyReturn
          return $bar === 'bar';
      }
  
@@ -116,7 +116,7 @@ diff --git a/tests/fixed/NamingCamelCase.php b/tests/fixed/NamingCamelCase.php
 index 5493471..57d9f2b 100644
 --- a/tests/fixed/NamingCamelCase.php
 +++ b/tests/fixed/NamingCamelCase.php
-@@ -6,11 +6,14 @@
+@@ -6,11 +6,14 @@ namespace Example;
  
  class NamingCamelCase
  {
@@ -154,7 +154,7 @@ diff --git a/tests/fixed/TrailingCommaOnFunctions.php b/tests/fixed/TrailingComm
 index 4248238..67173b3 100644
 --- a/tests/fixed/TrailingCommaOnFunctions.php
 +++ b/tests/fixed/TrailingCommaOnFunctions.php
-@@ -15,7 +15,7 @@ public function a(int $arg): void
+@@ -15,7 +15,7 @@ class TrailingCommaOnFunctions
      }
  
      public function b(
@@ -163,7 +163,7 @@ index 4248238..67173b3 100644
      ): void {
      }
  
-@@ -28,7 +28,7 @@ public function uses(): void
+@@ -28,7 +28,7 @@ class TrailingCommaOnFunctions
          };
  
          $multiLine = static function (int $arg) use (
@@ -176,7 +176,7 @@ diff --git a/tests/fixed/UselessConditions.php b/tests/fixed/UselessConditions.p
 index 71e0cfb..2151b17 100644
 --- a/tests/fixed/UselessConditions.php
 +++ b/tests/fixed/UselessConditions.php
-@@ -95,7 +95,7 @@ public function necessaryIfConditionWithMethodCall(): bool
+@@ -95,7 +95,7 @@ class UselessConditions
          return false;
      }
  
@@ -213,7 +213,7 @@ index 4988dab..c31e53f 100644
          $this->baxBax = $baxBax;
  
          parent::__construct();
-@@ -41,7 +52,7 @@ public function __construct(private int|null $foo = null, private array $bar = [
+@@ -41,7 +52,7 @@ class Example extends ParentClass implements IteratorAggregate
      /**
       * Description
       */
@@ -284,7 +284,7 @@ diff --git a/tests/fixed/return_type_on_methods.php b/tests/fixed/return_type_on
 index 0c897ae..8e2c6f7 100644
 --- a/tests/fixed/return_type_on_methods.php
 +++ b/tests/fixed/return_type_on_methods.php
-@@ -31,7 +31,7 @@ public function f(
+@@ -31,7 +31,7 @@ class Test
          int $c,
          int $d,
          int $e,
@@ -293,7 +293,7 @@ index 0c897ae..8e2c6f7 100644
      ): void {
      }
  
-@@ -40,7 +40,7 @@ public function g(
+@@ -40,7 +40,7 @@ class Test
          int $c,
          int $d,
          int $e,
@@ -302,7 +302,7 @@ index 0c897ae..8e2c6f7 100644
      ): void {
      }
  
-@@ -49,7 +49,7 @@ public function h(
+@@ -49,7 +49,7 @@ class Test
          int $c,
          int $d,
          int $e,
@@ -311,7 +311,7 @@ index 0c897ae..8e2c6f7 100644
      ): void {
      }
  
-@@ -58,7 +58,7 @@ public function i(
+@@ -58,7 +58,7 @@ class Test
          int $c,
          int $d,
          int $e,
@@ -320,7 +320,7 @@ index 0c897ae..8e2c6f7 100644
      ): void {
      }
  
-@@ -67,7 +67,7 @@ public function j(
+@@ -67,7 +67,7 @@ class Test
          int $c,
          int $d,
          int $e,
@@ -333,7 +333,7 @@ diff --git a/tests/fixed/type-hints.php b/tests/fixed/type-hints.php
 index 5e26ed8..bfa6d4f 100644
 --- a/tests/fixed/type-hints.php
 +++ b/tests/fixed/type-hints.php
-@@ -25,5 +25,6 @@ public function get(Iterator $iterator): Traversable
+@@ -25,5 +25,6 @@ class TraversableTypeHints
  
  class UnionTypeHints
  {
@@ -345,7 +345,7 @@ diff --git a/tests/input/ControlStructures.php b/tests/input/ControlStructures.p
 index 73944e3..a0e0b2e 100644
 --- a/tests/input/ControlStructures.php
 +++ b/tests/input/ControlStructures.php
-@@ -93,7 +93,7 @@ public function spaceBelowBlocks(): void
+@@ -93,7 +93,7 @@ class ControlStructures
          }
          try {
              echo 4;
@@ -400,7 +400,7 @@ diff --git a/tests/input/TrailingCommaOnFunctions.php b/tests/input/TrailingComm
 index fc5480e..8adcedf 100644
 --- a/tests/input/TrailingCommaOnFunctions.php
 +++ b/tests/input/TrailingCommaOnFunctions.php
-@@ -10,7 +10,7 @@
+@@ -10,7 +10,7 @@ use function var_dump;
  
  class TrailingCommaOnFunctions
  {
@@ -409,7 +409,7 @@ index fc5480e..8adcedf 100644
      {
      }
  
-@@ -23,7 +23,7 @@ public function uses(): void
+@@ -23,7 +23,7 @@ class TrailingCommaOnFunctions
      {
          $var = null;
  
